@@ -6,6 +6,7 @@ import BookShelfParent from "./components/BookShelfParent.vue";
 import UserDashboardParent from "./components/UserDashboardParent.vue";
 import PUserDashboardParent from "./components/LearnPinia/PUserDashboardParent.vue";
 import UserList from "./components/LearnPinia/UserList.vue";
+import BaseCounter from "@/components/task1-basecounter/BaseCounter.vue"
 </script>
 
 <template>
@@ -15,7 +16,8 @@ import UserList from "./components/LearnPinia/UserList.vue";
     <!-- <BookShelfParent /> -->
     <!-- <UserDashboardParent /> -->
     <!-- <PUserDashboardParent /> -->
-    <UserList />
+    <!--    <UserList />-->
+    <BaseCounter/>
   </div>
 </template>
 
