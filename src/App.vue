@@ -7,6 +7,8 @@ import UserDashboardParent from "./components/UserDashboardParent.vue";
 import PUserDashboardParent from "./components/LearnPinia/PUserDashboardParent.vue";
 import UserList from "./components/LearnPinia/UserList.vue";
 import BaseCounter from "@/components/task1-basecounter/BaseCounter.vue"
+import BaseToggle from "@/components/task2-basetoggle/BaseToggle.vue";
+import BaseTextarea from "@/components/task3-basetextarea/BaseTextarea.vue";
 </script>
 
 <template>
@@ -17,7 +19,9 @@ import BaseCounter from "@/components/task1-basecounter/BaseCounter.vue"
     <!-- <UserDashboardParent /> -->
     <!-- <PUserDashboardParent /> -->
     <!--    <UserList />-->
-    <BaseCounter/>
+<!--    <BaseCounter/>-->
+<!--    <BaseToggle/>-->
+    <BaseTextarea/>
   </div>
 </template>
 
