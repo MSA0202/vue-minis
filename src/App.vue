@@ -9,6 +9,9 @@ import UserList from "./components/LearnPinia/UserList.vue";
 import BaseCounter from "@/components/task1-basecounter/BaseCounter.vue"
 import BaseToggle from "@/components/task2-basetoggle/BaseToggle.vue";
 import BaseTextarea from "@/components/task3-basetextarea/BaseTextarea.vue";
+import BaseAlert from "@/components/task4-basealert/BaseAlert.vue";
+import AlertView from "@/components/task4-basealert/view/AlertView.vue";
+import AlertBox from "@/components/task4-basealert/AlertBox.vue";
 </script>
 
 <template>
@@ -21,7 +24,8 @@ import BaseTextarea from "@/components/task3-basetextarea/BaseTextarea.vue";
     <!--    <UserList />-->
 <!--    <BaseCounter/>-->
 <!--    <BaseToggle/>-->
-    <BaseTextarea/>
+<!--    <BaseTextarea/>-->
+    <AlertView/>
   </div>
 </template>
 

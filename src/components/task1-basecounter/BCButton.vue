@@ -11,5 +11,9 @@
 </script>
 
 <style scoped>
-
+button
+{
+  background-color: mediumpurple;
+  color: white;
+}
 </style>
