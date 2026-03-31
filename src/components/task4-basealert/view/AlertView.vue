@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <BCButton style=" padding: 1rem;" @click="showAlert">Click Me For Alert</BCButton>
-    <BaseAlert v-if="show"/>
+    <BaseAlert v-if="show" @showValue="handle"/>
   </div>
 </template>
 
@@ -14,6 +14,13 @@ const show: Ref<Boolean> = ref(false);
 function showAlert()
 {
   show.value = !show.value;
+}
+
+// See BaseAlert and AlertBox
+// Forwarded emission value to close the AlertPopup
+function handle(value: boolean)
+{
+  show.value = value;
 }
 
 watch(show, (newVal, oldVal) =>

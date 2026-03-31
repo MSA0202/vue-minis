@@ -1,15 +1,22 @@
 <template>
     <div class="wrapper">
       <div class="alert-box">
-        <AlertBox/>
+        <AlertBox @showValue="forward"/>
       </div>
     </div>
 </template>
 
 <script setup lang="ts">
-
-import BCButton from "@/components/task1-basecounter/BCButton.vue";
 import AlertBox from "@/components/task4-basealert/AlertBox.vue";
+
+const emits = defineEmits<{
+  (e: "showValue", value: boolean): void
+}>();
+
+function forward()
+{
+  emits('showValue', false);
+}
 </script>
 
 <style scoped>
@@ -31,7 +38,7 @@ import AlertBox from "@/components/task4-basealert/AlertBox.vue";
   left: 0;
   right: 0;
   bottom: 0;
-  /*Underlay ( + for overlay )*/
+  /* Underlay ( + for overlay )*/
   z-index: 10;
 }
 </style>
