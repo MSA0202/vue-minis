@@ -12,6 +12,8 @@ import BaseTextarea from "@/components/task3-basetextarea/BaseTextarea.vue";
 import BaseAlert from "@/components/task4-basealert/BaseAlert.vue";
 import AlertView from "@/components/task4-basealert/view/AlertView.vue";
 import AlertBox from "@/components/task4-basealert/AlertBox.vue";
+import BaseTab from "@/components/task5-basetabs/BaseTab.vue";
+import TabView from "@/components/task5-basetabs/TabView.vue";
 </script>
 
 <template>
@@ -25,7 +27,8 @@ import AlertBox from "@/components/task4-basealert/AlertBox.vue";
 <!--    <BaseCounter/>-->
 <!--    <BaseToggle/>-->
 <!--    <BaseTextarea/>-->
-    <AlertView/>
+<!--    <AlertView/>-->
+    <TabView/>
   </div>
 </template>
 
