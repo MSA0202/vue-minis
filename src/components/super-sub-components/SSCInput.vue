@@ -1,9 +1,9 @@
 <template>
-  <input class="ssc-input" type="text"/>
+  <input v-model="model" class="ssc-input" type="text"/>
 </template>
 
 <script setup lang="ts">
-
+const model = defineModel();
 </script>
 
 <style scoped>
