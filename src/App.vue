@@ -14,22 +14,30 @@ import AlertView from "@/components/task4-basealert/view/AlertView.vue";
 import AlertBox from "@/components/task4-basealert/AlertBox.vue";
 import BaseTab from "@/components/task5-basetabs/BaseTab.vue";
 import TabView from "@/components/task5-basetabs/TabView.vue";
+import BaseSelect from "@/components/task6-baseselectoption/BaseSelect.vue";
 </script>
 
 <template>
-  <div>
-    <!-- <Button /> -->
-    <!-- <WorkoutCardParent /> -->
-    <!-- <BookShelfParent /> -->
-    <!-- <UserDashboardParent /> -->
-    <!-- <PUserDashboardParent /> -->
-    <!--    <UserList />-->
+  <div class="all-views">
+<!--     <Button />-->
+<!--     <WorkoutCardParent />-->
+<!--     <BookShelfParent />-->
+<!--     <UserDashboardParent />-->
+<!--     <PUserDashboardParent />-->
+<!--        <UserList />-->
 <!--    <BaseCounter/>-->
 <!--    <BaseToggle/>-->
 <!--    <BaseTextarea/>-->
 <!--    <AlertView/>-->
-    <TabView/>
+<!--    <TabView/>-->
+    <BaseSelect/>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.all-views > * {
+  border: 10px solid rgba(244,70,255,0.96);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+</style>
