@@ -15,6 +15,7 @@ import AlertBox from "@/components/task4-basealert/AlertBox.vue";
 import BaseTab from "@/components/task5-basetabs/BaseTab.vue";
 import TabView from "@/components/task5-basetabs/TabView.vue";
 import BaseSelect from "@/components/task6-baseselectoption/BaseSelect.vue";
+import DelayedInputDisplayView from "@/components/task7-delayedinputdisplay/DelayedInputDisplayView.vue";
 </script>
 
 <template>
@@ -30,7 +31,8 @@ import BaseSelect from "@/components/task6-baseselectoption/BaseSelect.vue";
 <!--    <BaseTextarea/>-->
 <!--    <AlertView/>-->
 <!--    <TabView/>-->
-    <BaseSelect/>
+<!--    <BaseSelect/>-->
+    <DelayedInputDisplayView/>
   </div>
 </template>
 
