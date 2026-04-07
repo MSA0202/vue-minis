@@ -16,6 +16,7 @@ import BaseTab from "@/components/task5-basetabs/BaseTab.vue";
 import TabView from "@/components/task5-basetabs/TabView.vue";
 import BaseSelect from "@/components/task6-baseselectoption/BaseSelect.vue";
 import DelayedInputDisplayView from "@/components/task7-delayedinputdisplay/DelayedInputDisplayView.vue";
+import BaseAccordion from "@/components/task8-accordion/BaseAccordion.vue";
 </script>
 
 <template>
@@ -32,7 +33,8 @@ import DelayedInputDisplayView from "@/components/task7-delayedinputdisplay/Dela
 <!--    <AlertView/>-->
 <!--    <TabView/>-->
 <!--    <BaseSelect/>-->
-    <DelayedInputDisplayView/>
+<!--    <DelayedInputDisplayView/>-->
+    <BaseAccordion/>
   </div>
 </template>
 
