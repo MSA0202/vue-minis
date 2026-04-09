@@ -17,6 +17,7 @@ import TabView from "@/components/task5-basetabs/TabView.vue";
 import BaseSelect from "@/components/task6-baseselectoption/BaseSelect.vue";
 import DelayedInputDisplayView from "@/components/task7-delayedinputdisplay/DelayedInputDisplayView.vue";
 import BaseAccordion from "@/components/task8-accordion/BaseAccordion.vue";
+import BaseProgressBar from "@/components/task9-progressbar/BaseProgressBar.vue";
 </script>
 
 <template>
@@ -34,7 +35,8 @@ import BaseAccordion from "@/components/task8-accordion/BaseAccordion.vue";
 <!--    <TabView/>-->
 <!--    <BaseSelect/>-->
 <!--    <DelayedInputDisplayView/>-->
-    <BaseAccordion/>
+<!--    <BaseAccordion/>-->
+    <BaseProgressBar/>
   </div>
 </template>
 
