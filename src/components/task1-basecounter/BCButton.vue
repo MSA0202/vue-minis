@@ -15,5 +15,6 @@ button
 {
   background-color: mediumpurple;
   color: white;
+  width: fit-content;
 }
 </style>
