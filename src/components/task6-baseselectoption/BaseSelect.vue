@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, type Reactive, ref} from "vue";
+import {computed, type Reactive, ref, watch} from "vue";
 
 const colours: Reactive<Colours[]> =
 [
@@ -33,6 +33,15 @@ const wrapperStyle = computed(() => ({
   backgroundColor: selected.value,
   color: "yellow"
 }))
+
+/* Make colour selected available to Parent Components */
+// Define an emit for emitting to parent
+const emit = defineEmits<{
+  (e:"selectedValue", value: string) :void
+}>();
+
+// Watch for select list changes and emit the changed value
+watch(selected, (newValue) => emit("selectedValue", newValue))
 </script>
 
 <style scoped>
