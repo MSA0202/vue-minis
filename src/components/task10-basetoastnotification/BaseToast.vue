@@ -1,27 +1,40 @@
 <template>
   <div class="wrapper">
-    <SSCInput placeholder="Type to keep the toast alive!" style="width: 200px"/>
-    <div :class="open ? 'toast-popup-open' : 'toast-popup-closed'">
+    <SSCInput v-model="userInput" placeholder="Type to keep the toast alive!" style="width: 200px"/>
+    <div class="toast-popup" :class="open ? 'toast-popup-open' : 'toast-popup-closed'">
       <div class="toast-content">
         This is a toast !
       </div>
     </div>
-    <BCButton @click="temporaryTest">Temporary</BCButton>
   </div>
 </template>
 
 <script setup lang="ts">
 import SSCInput from "@/components/super-sub-components/SSCInput.vue";
-import {ref} from "vue";
-import BCButton from "@/components/task1-basecounter/BCButton.vue";
+import {ref, watch} from "vue";
 
-const open = ref(true);
-const appearanceFadeOutTimer = ref(2);
+const open = ref(false);
+const userInput = ref("");
 
-function temporaryTest()
+let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+watch(userInput, (newValue) =>
 {
-  open.value = !open.value
-}
+  // If user keeps typing, timer is reset until they aren't typing anymore
+  if (newValue)
+  {
+    open.value = true;
+
+    // clear previous timer
+    if (timeoutId) clearTimeout(timeoutId);
+
+    // start new timer
+    timeoutId = setTimeout(() =>
+    {
+      open.value = false;
+    }, 200);
+  }
+});
 </script>
 
 <style scoped>
@@ -31,17 +44,7 @@ function temporaryTest()
   flex-direction: column;
   gap: 40px
 }
-.toast-popup-closed
-{
-  display: flex;
-  justify-content: center;
-
-  max-height: 0;
-  opacity: 0;
-  /*todo complete*/
-  transition-duration: 1s; /* closing speed */
-}
-.toast-popup-open
+.toast-popup
 {
   display: flex;
   justify-content: center;
@@ -51,8 +54,20 @@ function temporaryTest()
   width: 50%;
   height: 100px;
 
-  transition-duration: 0.5s; /* opening speed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast-popup-closed
+{
+  opacity: 0;
+  transform: translateX(100px);
+  pointer-events: none;
+}
+
+.toast-popup-open
+{
   opacity: 1;
+  transform: translateY(0);
 }
 .toast-content
 {
