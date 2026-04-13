@@ -19,6 +19,8 @@ import DelayedInputDisplayView from "@/components/task7-delayedinputdisplay/Dela
 import BaseAccordion from "@/components/task8-accordion/BaseAccordion.vue";
 import BaseProgressBar from "@/components/task9-progressbar/BaseProgressBar.vue";
 import BaseToast from "@/components/task10-basetoastnotification/BaseToast.vue";
+import KeepToastAlive from "@/components/task10-basetoastnotification/KeepToastAlive.vue";
+import BaseForm from "@/components/task11-form/BaseForm.vue";
 </script>
 
 <template>
@@ -38,7 +40,8 @@ import BaseToast from "@/components/task10-basetoastnotification/BaseToast.vue";
 <!--    <DelayedInputDisplayView/>-->
 <!--    <BaseAccordion/>-->
 <!--    <BaseProgressBar/>-->
-    <BaseToast/>
+<!--    <KeepToastAlive/>-->
+    <BaseForm/>
   </div>
 </template>
 

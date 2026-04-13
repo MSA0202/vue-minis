@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <SSCInput v-model="userInput" placeholder="Type to keep the toast alive!" style="width: 200px"/>
     <div class="toast-popup" :class="open ? 'toast-popup-open' : 'toast-popup-closed'">
       <div class="toast-content">
         This is a toast !
@@ -10,31 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import SSCInput from "@/components/super-sub-components/SSCInput.vue";
 import {ref, watch} from "vue";
 
-const open = ref(false);
-const userInput = ref("");
-
-let timeoutId: ReturnType<typeof setTimeout> | null = null;
-
-watch(userInput, (newValue) =>
-{
-  // If user keeps typing, timer is reset until they aren't typing anymore
-  if (newValue)
-  {
-    open.value = true;
-
-    // clear previous timer
-    if (timeoutId) clearTimeout(timeoutId);
-
-    // start new timer
-    timeoutId = setTimeout(() =>
-    {
-      open.value = false;
-    }, 200);
-  }
-});
+defineProps<{
+  open: boolean
+}>();
 </script>
 
 <style scoped>
@@ -48,11 +27,17 @@ watch(userInput, (newValue) =>
 {
   display: flex;
   justify-content: center;
+  background-color: white;
+  color: black;
 
   border: 3px solid white;
   border-radius: 8px;
-  width: 50%;
+  width: 30%;
   height: 100px;
+
+  position: absolute;
+  top: 20px;
+  right: 40px;
 
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
