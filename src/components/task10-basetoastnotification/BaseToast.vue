@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="toast-popup" :class="open ? 'toast-popup-open' : 'toast-popup-closed'">
       <div class="toast-content">
-        This is a toast !
+        {{ content }}
       </div>
     </div>
   </div>
@@ -12,7 +12,8 @@
 import {ref, watch} from "vue";
 
 defineProps<{
-  open: boolean
+  open: boolean,
+  content: string[]
 }>();
 </script>
 
@@ -27,8 +28,8 @@ defineProps<{
 {
   display: flex;
   justify-content: center;
-  background-color: white;
-  color: black;
+  background-color: red;
+  color: white;
 
   border: 3px solid white;
   border-radius: 8px;
@@ -59,5 +60,6 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 </style>

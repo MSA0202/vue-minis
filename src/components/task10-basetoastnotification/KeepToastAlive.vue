@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <SSCInput v-model="userInput" placeholder="Type to keep the toast alive!" style="width: 200px"/>
-    <BaseToast :open="open"/>
+    <BaseToast :open="open" content="This is a toast"/>
   </div>
 </template>
 
