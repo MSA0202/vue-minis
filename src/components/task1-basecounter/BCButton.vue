@@ -17,4 +17,9 @@ button
   color: white;
   width: fit-content;
 }
+button:hover
+{
+  background-color: #333333;
+  transition: 0.4s ease;
+}
 </style>

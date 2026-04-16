@@ -2,7 +2,9 @@
   <div class="wrapper">
     <div class="toast-popup" :class="open ? 'toast-popup-open' : 'toast-popup-closed'">
       <div class="toast-content">
-        {{ content }}
+        <ul>
+          <li v-for="item in content" key="item" style="font-size: 12px; "> {{ item }}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -27,11 +29,11 @@ defineProps<{
 .toast-popup
 {
   display: flex;
-  justify-content: center;
-  background-color: red;
-  color: white;
+  justify-content: left;
+  background-color: white;
+  color: red;
 
-  border: 3px solid white;
+  border: 3px solid black;
   border-radius: 8px;
   width: 30%;
   height: 100px;

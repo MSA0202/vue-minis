@@ -74,7 +74,7 @@ function validate()
   }
   if (password.value.length < 8)
   {
-    errors.value.push("Password length must be greater than 8");
+    errors.value.push("Password length must be greater than 8!");
   }
 }
 
