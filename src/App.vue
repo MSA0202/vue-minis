@@ -21,6 +21,7 @@ import BaseProgressBar from "@/components/task9-progressbar/BaseProgressBar.vue"
 import BaseToast from "@/components/task10-basetoastnotification/BaseToast.vue";
 import KeepToastAlive from "@/components/task10-basetoastnotification/KeepToastAlive.vue";
 import BaseForm from "@/components/task11-form/BaseForm.vue";
+import LightDarkThemView from "@/components/task12-lightdarktheme/LightDarkThemView.vue";
 </script>
 
 <template>
@@ -41,7 +42,8 @@ import BaseForm from "@/components/task11-form/BaseForm.vue";
 <!--    <BaseAccordion/>-->
 <!--    <BaseProgressBar/>-->
 <!--    <KeepToastAlive/>-->
-    <BaseForm/>
+<!--    <BaseForm/>-->
+    <LightDarkThemView />
   </div>
 </template>
 
