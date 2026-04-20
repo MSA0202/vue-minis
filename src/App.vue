@@ -22,6 +22,7 @@ import BaseToast from "@/components/task10-basetoastnotification/BaseToast.vue";
 import KeepToastAlive from "@/components/task10-basetoastnotification/KeepToastAlive.vue";
 import BaseForm from "@/components/task11-form/BaseForm.vue";
 import LightDarkThemView from "@/components/task12-lightdarktheme/LightDarkThemView.vue";
+import DragDropAndReplaceList from "@/components/task13-draganddrop/DragDropAndReplaceList.vue";
 </script>
 
 <template>
@@ -43,7 +44,8 @@ import LightDarkThemView from "@/components/task12-lightdarktheme/LightDarkThemV
 <!--    <BaseProgressBar/>-->
 <!--    <KeepToastAlive/>-->
 <!--    <BaseForm/>-->
-    <LightDarkThemView />
+<!--    <LightDarkThemView />-->
+    <DragDropAndReplaceList />
   </div>
 </template>
 
