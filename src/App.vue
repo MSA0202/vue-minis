@@ -24,6 +24,7 @@ import BaseForm from "@/components/task11-form/BaseForm.vue";
 import LightDarkThemView from "@/components/task12-lightdarktheme/LightDarkThemView.vue";
 import DragDropAndReplaceList from "@/components/task13-draganddrop/DragDropAndReplaceList.vue";
 import DragDropAndReorderList from "@/components/task13-draganddrop/DragDropAndReorderList.vue";
+import BaseLoadingOverlay from "@/components/task14-loadingoverlay/BaseLoadingOverlay.vue";
 </script>
 
 <template>
@@ -46,8 +47,9 @@ import DragDropAndReorderList from "@/components/task13-draganddrop/DragDropAndR
 <!--    <KeepToastAlive/>-->
 <!--    <BaseForm/>-->
 <!--    <LightDarkThemView />-->
-    <DragDropAndReplaceList />
-    <DragDropAndReorderList />
+<!--    <DragDropAndReplaceList />-->
+<!--    <DragDropAndReorderList />-->
+    <BaseLoadingOverlay />
   </div>
 </template>
 
