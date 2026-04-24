@@ -25,6 +25,7 @@ import LightDarkThemView from "@/components/task12-lightdarktheme/LightDarkThemV
 import DragDropAndReplaceList from "@/components/task13-draganddrop/DragDropAndReplaceList.vue";
 import DragDropAndReorderList from "@/components/task13-draganddrop/DragDropAndReorderList.vue";
 import BaseLoadingOverlay from "@/components/task14-loadingoverlay/BaseLoadingOverlay.vue";
+import KFHeartPulse from "@/components/task15-kf-heartpulse/KFHeartPulse.vue";
 </script>
 
 <template>
@@ -49,7 +50,8 @@ import BaseLoadingOverlay from "@/components/task14-loadingoverlay/BaseLoadingOv
 <!--    <LightDarkThemView />-->
 <!--    <DragDropAndReplaceList />-->
 <!--    <DragDropAndReorderList />-->
-    <BaseLoadingOverlay />
+<!--    <BaseLoadingOverlay />-->
+    <KFHeartPulse />
   </div>
 </template>
 
