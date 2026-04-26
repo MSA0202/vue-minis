@@ -26,6 +26,7 @@ import DragDropAndReplaceList from "@/components/task13-draganddrop/DragDropAndR
 import DragDropAndReorderList from "@/components/task13-draganddrop/DragDropAndReorderList.vue";
 import BaseLoadingOverlay from "@/components/task14-loadingoverlay/BaseLoadingOverlay.vue";
 import KFHeartPulse from "@/components/task15-kf-heartpulse/KFHeartPulse.vue";
+import KFBouncingBall from "@/components/task16-kf-bouncingball/KFBouncingBall.vue";
 </script>
 
 <template>
@@ -51,7 +52,8 @@ import KFHeartPulse from "@/components/task15-kf-heartpulse/KFHeartPulse.vue";
 <!--    <DragDropAndReplaceList />-->
 <!--    <DragDropAndReorderList />-->
 <!--    <BaseLoadingOverlay />-->
-    <KFHeartPulse />
+<!--    <KFHeartPulse />-->
+    <KFBouncingBall />
   </div>
 </template>
 
