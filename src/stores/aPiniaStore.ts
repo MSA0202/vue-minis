@@ -1,7 +1,10 @@
 import { defineStore } from "pinia";
 import type { User } from "./interfaces";
 import { dummyUsers } from "./storedummydata";
+import {ref} from "vue";
 
+
+/* USING OPTIONS API */
 export const useAPiniaStore = defineStore("aPiniaStore", {
   state: () => ({
     users: [...dummyUsers] as User[],
@@ -19,6 +22,28 @@ export const useAPiniaStore = defineStore("aPiniaStore", {
       this.users = this.users.filter((user) => user.id !== id);
     },
   },
+});
+
+/* USING COMPOSITION API */
+export const useAPiniaStoreComposition = defineStore('compositionStore', () =>
+{
+  const users = ref<User[]>([...dummyUsers]);
+
+  function updateUser(updatedUser: User)
+  {
+    const index = users.value.findIndex((u) => u.id === updatedUser.id);
+    if (index !== -1) {
+      users.value[index] = { ...updatedUser };
+    }
+  }
+
+  function removeUser(id: number)
+  {
+    users.value = users.value.filter((user) => user.id !== id );
+  }
+
+  return { users, updateUser, removeUser }
+
 });
 
 // Concept	What It Means
