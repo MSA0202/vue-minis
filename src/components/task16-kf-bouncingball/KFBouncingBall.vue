@@ -41,17 +41,17 @@
   }
 
   60% {
-    transform: translateY(120px) scale(1.2, 0.95); /* stretch after hitting ground */
+    transform: translateY(120px) scale(1.2, 0.95); /* stretch after hitting ground and going back up */
     animation-timing-function: ease-in;
   }
 
   80% {
-    transform: translateY(200px) scale(0.9, 1.1); /* smaller squash for falling again */
+    transform: translateY(200px) scale(0.9, 1.1); /* smaller squash for falling again from lower height */
     animation-timing-function: ease-out;
   }
 
   100% {
-    transform: translateY(0) scale(0.6, 1.1); /* stretch going back up */
+    transform: translateY(0) scale(0.6, 1.1); /* stretch going (flying) back up */
   }
 }
 </style>
