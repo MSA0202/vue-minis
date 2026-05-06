@@ -17,7 +17,7 @@
 <script setup lang="ts">
 const images =
     {
-      "image": ["𝐕", "💪", "♨️", "🧩", "⚛️"]
+      "image": ["𝐕", "💪", "♨️", "🧩", "⚛️"],
     }
 </script>
 
@@ -26,16 +26,19 @@ const images =
 {
   overflow: hidden;
   display: flex;
+  flex-direction: row;
+  width: 80%;
+  /*
+  Do not use these, they break the animation and create a gap just before it resets
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  width: 50%;
+  */
 }
 .scroll-track
 {
   display: flex;
   width: max-content;
-  animation: infinite-scroll 3s linear infinite;
+  animation:  infinite-scroll-rl 6s linear infinite;
 }
 
 .images
@@ -49,7 +52,19 @@ const images =
   font-size: 60px;
 }
 
-@keyframes infinite-scroll
+@keyframes infinite-scroll-rl
+{
+  from {
+    /* Start halfway through the track */
+    transform: translateX(-50%);
+  }
+  to {
+    /* Move back to the very beginning */
+    transform: translateX(0);
+  }
+}
+
+@keyframes infinite-scroll-lr
 {
   from
   {
@@ -57,7 +72,7 @@ const images =
   }
   to
   {
-    transform: translateX(50%);
+    transform: translateX(-50%);
   }
 }
 </style>
